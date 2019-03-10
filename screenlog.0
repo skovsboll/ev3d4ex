@@ -1,0 +1,910 @@
+EV3 initialization passed!
+Booting EV3 EEprom Boot Loader
+
+	EEprom Version:   0.60
+	EV3 Flashtype:    N25Q128A13B
+
+EV3 Booting system 
+
+Jumping to entry point at: 0xC1080000
+
+
+U-Boot 2009.11 (Oct 26 2012 - 10:30:38)
+
+I2C:   ready
+DRAM:  64 MB
+MMC:   davinci: 0
+In:    serial
+Out:   serial
+Err:   serial
+ARM Clock : 300000000 Hz
+DDR Clock : 132000000 Hz
+Invalid MAC address read.
+Hit 'l' to stop autoboot:  0 
+reading boot.scr
+
+** Unable to read "boot.scr" from mmc 0:1 **
+reading uImage
+
+2731320 bytes read
+## Booting kernel from Legacy Image at c0007fc0 ...
+   Image Name:   Linux-4.4.32-17-ev3dev-ev3
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    2731256 Bytes =  2.6 MB
+   Load Address: c0008000
+   Entry Point:  c0008000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.4.32-17-ev3dev-ev3 (root@eabed294c0e7) (gcc version 7.3.0 (crosstool-NG 1.23.0.418-d590) ) #1 PREEMPT Tue Aug 28 13:45:55 UTC 2018
+CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=0005317f
+CPU: VIVT data cache, VIVT instruction cache
+Machine: LEGO MINDSTORMS EV3 Programmable Brick
+Ignoring tag cmdline (using the default kernel command line)
+Memory policy: Data cache writeback
+DaVinci da850/omap-l138/am18x variant 0x1
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+Kernel command line: mem=64M console=ttyS1,115200n8 root=/dev/mmcblk0p2 rootwait lpj=747520
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 59276K/65536K available (3918K kernel code, 191K rwdata, 1232K rodata, 176K init, 99K bss, 6260K reserved, 0K cma-reserved)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xc4800000 - 0xff800000   ( 944 MB)
+    lowmem  : 0xc0000000 - 0xc4000000   (  64 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .text : 0xc0008000 - 0xc050ff54   (5152 kB)
+      .init : 0xc0510000 - 0xc053c000   ( 176 kB)
+      .data : 0xc053c000 - 0xc056bdc0   ( 192 kB)
+       .bss : 0xc056bdc0 - 0xc0584b78   ( 100 kB)
+SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:245
+clocksource: timer0_1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped) preset value.. 149.50 BogoMIPS (lpj=747520)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0xc0008400 - 0xc000843c
+devtmpfs: initialized
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor ladder
+cpuidle: using governor menu
+legoev3_init: global_cursor_default: 0, default_screen_mode: -1
+edma edma.0: Legacy memcpy is enabled, things might not work
+edma edma.0: TI EDMA DMA engine driver
+edma edma.1: Legacy memcpy is enabled, things might not work
+edma edma.1: TI EDMA DMA engine driver
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+clocksource: Switched to clocksource timer0_1
+cfg80211: World regulatory domain updated:
+cfg80211:  DFS Master region: unset
+cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+cfg80211:   (2457000 KHz - 2482000 KHz @ 20000 KHz, 92000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (0 s)
+cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
+cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
+NET: Registered protocol family 2
+TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+futex hash table entries: 256 (order: -1, 3072 bytes)
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+io scheduler noop registered (default)
+Serial: 8250/16550 driver, 3 ports, IRQ sharing disabled
+serial8250.0: ttyS0 at MMIO 0x1c42000 (irq = 25, base_baud = 9375000) is a 16550A
+console [ttyS1] disabled
+serial8250.1: ttyS1 at MMIO 0x1d0c000 (irq = 53, base_baud = 8250000) is a 16550A
+console [ttyS1] enabled
+serial8250.2: ttyS2 at MMIO 0x1d0d000 (irq = 61, base_baud = 8250000) is a TL16C550
+loop: module loaded
+zram: Added device: zram0
+at24 1-0050: 16384 byte 24c128 EEPROM, read-only, 0 bytes/write
+spi_davinci spi_davinci.1: DMA: supported
+spi_davinci spi_davinci.1: DMA: RX channel: 0x00000012, TX channel: 0x00000013, event queue: 0
+Console: switching to mono frame buffer device 22x16
+fb0: ST7586 frame buffer device, using 10.5 KiB of video memory
+spi_davinci spi_davinci.1: Controller at 0xfef0e000
+spi_davinci spi_davinci.0: DMA: supported
+spi_davinci spi_davinci.0: DMA: RX channel: 0x0000000e, TX channel: 0x0000000f, event queue: 0
+spi_davinci spi_davinci.0: Controller at 0xfec41000
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci ohci.0: DA8xx OHCI
+ohci ohci.0: new USB bus registered, assigned bus number 1
+Waiting for USB PHY clock good...
+ohci ohci.0: irq 59, io mem 0x01e25000
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0001
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: DA8xx OHCI
+usb usb1: Manufacturer: Linux 4.4.32-17-ev3dev-ev3 ohci_hcd
+usb usb1: SerialNumber: ohci.0
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+usbcore: registered new interface driver usb-storage
+Waiting for USB PHY clock good...
+using random self ethernet address
+using random host ethernet address
+usb0: HOST MAC fa:77:4d:51:7e:e8
+usb0: MAC 72:6e:62:b9:ee:96
+g_cdc gadget: CDC Composite Gadget, version: King Kamehameha Day 2008
+g_cdc gadget: g_cdc ready
+omap_rtc da830-rtc: rtc core: registered da830-rtc as rtc0
+i2c /dev entries driver
+davinci-wdt davinci-wdt: heartbeat 60 sec
+davinci_mmc da830-mmc.0: Using DMA, 4-bit mode
+hidraw: raw HID events driver (C) Jiri Kosina
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+NET: Registered protocol family 17
+input: EV3 buttons as /devices/platform/gpio-keys.0/input/input0
+Waiting for root device /dev/mmcblk0p2...
+mmc0: new high speed SDHC card at address 1234
+mmcblk0: mmc0:1234 SA16G 14.5 GiB 
+ mmcblk0: p1 p2 p4
+VFS: Mounted root (squashfs filesystem) readonly on device 179:2.
+devtmpfs: mounted
+Freeing unused kernel memory: 176K (c0510000 - c053c000)
+usb 1-1: new full-speed USB device number 2 using ohci
+usb 1-1: New USB device found, idVendor=7392, idProduct=7811
+usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-1: Product: 802.11n WLAN Adapter
+EXT4-fs (mmcblk0p4): VFS: Can't find ext4 filesystem
+usb 1-1: Manufacturer: Realtek
+usb 1-1: SerialNumber: 00e04c000001
+erlinit: Cannot mount /dev/mmcblk0p4 at /root: Invalid argument
+random: nonblocking pool is initialized
+heart: Kernel watchdog activated (interval 5s)
+Erlang/OTP 21 [erts-10.0.5] [source] [smp:1:1] [ds:1:1:10] [async-threads:1]
+
+Error handling File /root/.cache/erlang-history/erlang-shell-log.siz. Reason: enoent
+History logging will be disabled.
+Disabling shell history logging.
+Interactive Elixir (1.8.0) - press Ctrl+C to exit (type h() ENTER for help)
+[38;5;34mToolshed[0m imported. Run h(Toolshed) for more info
+RingLogger is collecting log messages from Elixir and Linux. To see the
+messages, either attach the current IEx session to the logger:
+
+  RingLogger.attach
+
+or print the next messages in the log:
+
+  RingLogger.next
+
+iex(1)> EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: (null)
+legoev3-ports legoev3-ports: Input port in1 is disabled.
+lego-port port0: Registered 'in2' on 'legoev3-ports'.
+lego-port port1: Registered 'in3' on 'legoev3-ports'.
+lego-port port2: Registered 'in4' on 'legoev3-ports'.
+lego-port port3: Registered 'outA' on 'legoev3-ports'.
+lego-port port4: Registered 'outB' on 'legoev3-ports'.
+lego-port port5: Registered 'outC' on 'legoev3-ports'.
+lego-port port6: Registered 'outD' on 'legoev3-ports'.
+lego-port port1: Added new device 'in3:lego-ev3-touch'
+lego-port port4: Added new device 'outB:lego-ev3-m-motor'
+lego-port port3: Added new device 'outA:lego-ev3-l-motor'
+lego-port port5: Added new device 'outC:lego-ev3-l-motor'
+lego-port port0: Added new device 'in2:ev3-uart-host'
+lego-port port2: Added new device 'in4:ev3-uart-host'
+usbcore: registered new interface driver rtl8192cu
+ti_omapl_pru_suart ti_omapl_pru_suart.1: fw size 3772. downloading...
+ti_omapl_pru_suart.1: ttySU0 at MMIO 0x1d00000 (irq = 3, base_baud = 8250000) is a suart_tty
+ti_omapl_pru_suart.1: ttySU1 at MMIO 0x1d00000 (irq = 4, base_baud = 8250000) is a suart_tty
+ti_omapl_pru_suart ti_omapl_pru_suart.1: ti_omapl_pru_suart device registered(pru_clk=150000000, asp_clk=132000000)
+lego-sensor sensor0: Registered 'lego-ev3-touch' on 'in3'.
+tacho-motor motor0: Registered 'lego-ev3-m-motor' on 'outB'.
+tacho-motor motor1: Registered 'lego-ev3-l-motor' on 'outA'.
+tacho-motor motor2: Registered 'lego-ev3-l-motor' on 'outC'.
+input: EV3 speaker beep as /devices/platform/snd-legoev3/input/input1
+
+7[r[999;999H[6n8[33m[35mnil[0m[33m[0m
+iex(2)> {:ok, file} = File.open("hello", [:write])[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        ", [:write]) ", [:write]) ", [:write]) ", [:write]) ", [:write]) [C        [C        [C        [C        ::write])r:write])e:write])a:write])d:write]),:write]) :write])[C        [C        [C        [C        [C        [C        /", [:read, :write])d", [:read, :write])e", [:read, :write])v", [:read, :write])/", [:read, :write])(", [:read, :write])", [:read, :write]) ", [:read, :write]) ", [:read, :write]) ", [:read, :write]) ", [:read, :write]) s", [:read, :write])y", [:read, :write])s", [:read, :write])/", [:read, :write])c", [:read, :write])l", [:read, :write])a", [:read, :write])s", [:read, :write])s", [:read, :write])/", [:read, :write])t", [:read, :write])a", [:read, :write])c", [:read, :write])h", [:read, :write])o", [:read, :write]).", [:read, :write])m", [:read, :write])", [:read, :write]) -", [:read, :write])", [:read, :write]) ", [:read, :write]) -", [:read, :write])m", [:read, :write])o", [:read, :write])t", [:read, :write])o", [:read, :write])r", [:read, :write])/", [:read, :write])m", [:read, :write])o", [:read, :write])t", [:read, :write])o", [:read, :write])r", [:read, :write])2", [:read, :write])", [:read, :write]) 1", [:read, :write])[C7[r[999;999H[6n8        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        
+[31m** (MatchError) no match of right hand side value: {:error, :eisdir}[0m
+[31m    (stdlib) erl_eval.erl:450: :erl_eval.expr/5
+    (iex) lib/iex/evaluator.ex:257: IEx.Evaluator.handle_eval/5
+    (iex) lib/iex/evaluator.ex:237: IEx.Evaluator.do_eval/3
+    (iex) lib/iex/evaluator.ex:215: IEx.Evaluator.eval/3
+    (iex) lib/iex/evaluator.ex:103: IEx.Evaluator.loop/1
+    (iex) lib/iex/evaluator.ex:27: IEx.Evaluator.init/4
+[0m iex(2)>          iex(2)> {:ok, file} = File.open("/sys/class/tacho-motor/motor1", [:read, :write])", [:read, :write]) 0", [:read, :write])[C7[r[999;999H[6n8        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        
+[31m** (MatchError) no match of right hand side value: {:error, :eisdir}[0m
+[31m    (stdlib) erl_eval.erl:450: :erl_eval.expr/5
+    (iex) lib/iex/evaluator.ex:257: IEx.Evaluator.handle_eval/5
+    (iex) lib/iex/evaluator.ex:237: IEx.Evaluator.do_eval/3
+    (iex) lib/iex/evaluator.ex:215: IEx.Evaluator.eval/3
+    (iex) lib/iex/evaluator.ex:103: IEx.Evaluator.loop/1
+    (iex) lib/iex/evaluator.ex:27: IEx.Evaluator.init/4
+[0m iex(2)>          iex(2)> {:ok, file} = File.open("/sys/class/tacho-motor/motor0", [:read, :write]):write]) :write]) :write]) :write]) :write]) :write]) :write]) [C        [C        [C        [C        [C        [C        [C        [C        
+[31m** (MatchError) no match of right hand side value: {:error, :eisdir}[0m
+[31m    (stdlib) erl_eval.erl:450: :erl_eval.expr/5
+    (iex) lib/iex/evaluator.ex:257: IEx.Evaluator.handle_eval/5
+    (iex) lib/iex/evaluator.ex:237: IEx.Evaluator.do_eval/3
+    (iex) lib/iex/evaluator.ex:215: IEx.Evaluator.eval/3
+    (iex) lib/iex/evaluator.ex:103: IEx.Evaluator.loop/1
+    (iex) lib/iex/evaluator.ex:27: IEx.Evaluator.init/4
+[0m iex(2)> Systemn.  .cmd()[C        [C        ")")f")o")r") ")f") ")i")n") ")/")s")y")s")/")c")l")a")s")s")/")t")a")c")h")o")-")m")o")t")o")r")/")*");") ")d")o") ")e")c")h")o") ")-")n") ")"")$")f"):") ")"");") ")c")a")t") ")$")f")/")a")d")d")r")e")s")s");") ")d")o")n")e")[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        \"$f: "; cat $f/address; done")[C        [C        [C        [C        [C        \"; cat $f/address; done")[C7[r[999;999H[6n8        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        
+[31m** (UndefinedFunctionError) function System.cmd/1 is undefined or private. Did you mean one of:
+
+      * cmd/2
+      * cmd/3
+[0m
+[31m    (elixir) System.cmd("for f in /sys/class/tacho-motor/*; do echo -n \"$f: \"; cat $f/address; done")
+[0m iex(2)>          iex(2)> System.cmd("for f in /sys/class/tacho-motor/*; do echo -n \"$f: \"; cat $f/address; done")[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C         /sys/class/tacho-motor/*; do echo -n \"$f: \"; cat $f/address; done")  /sys/class/tacho-motor/*; do echo -n \"$f: \"; cat $f/address; done")  /sys/class/tacho-motor/*; do echo -n \"$f: \"; cat $f/address; done")  /sys/class/tacho-motor/*; do echo -n \"$f: \"; cat $f/address; done")  /sys/class/tacho-motor/*; do echo -n \"$f: \"; cat $f/address; done")  /sys/class/tacho-motor/*; do echo -n \"$f: \"; cat $f/address; done")  /sys/class/tacho-motor/*; do echo -n \"$f: \"; cat $f/address; done")  /sys/class/tacho-motor/*; do echo -n \"$f: \"; cat $f/address; done") l /sys/class/tacho-motor/*; do echo -n \"$f: \"; cat $f/address; done")s /sys/class/tacho-motor/*; do echo -n \"$f: \"; cat $f/address; done")" /sys/class/tacho-motor/*; do echo -n \"$f: \"; cat $f/address; done"), /sys/class/tacho-motor/*; do echo -n \"$f: \"; cat $f/address; done")[C        "/sys/class/tacho-motor/*; do echo -n \"$f: \"; cat $f/address; done")[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C         do echo -n \"$f: \"; cat $f/address; done") do echo -n \"$f: \"; cat $f/address; done") o echo -n \"$f: \"; cat $f/address; done")  echo -n \"$f: \"; cat $f/address; done") echo -n \"$f: \"; cat $f/address; done") cho -n \"$f: \"; cat $f/address; done") ho -n \"$f: \"; cat $f/address; done") o -n \"$f: \"; cat $f/address; done")  -n \"$f: \"; cat $f/address; done") -n \"$f: \"; cat $f/address; done") n \"$f: \"; cat $f/address; done")  \"$f: \"; cat $f/address; done") \"$f: \"; cat $f/address; done") "$f: \"; cat $f/address; done") $f: \"; cat $f/address; done") f: \"; cat $f/address; done") : \"; cat $f/address; done")  \"; cat $f/address; done") \"; cat $f/address; done") "; cat $f/address; done") ; cat $f/address; done")  cat $f/address; done") cat $f/address; done") at $f/address; done") t $f/address; done")  $f/address; done") $f/address; done") f/address; done") /address; done") address; done") ddress; done") dress; done") ress; done") ess; done") ss; done") s; done") ; done")  done") done") one") ne") e") ") [C7[r[999;999H[6n8        [C        
+[31m** (FunctionClauseError) no function clause matching in System.cmd/3[0m    
+    
+    The following arguments were given to System.cmd/3:
+    
+        # 1
+        [32m"ls"[0m
+    
+        # 2
+        [32m"/sys/class/tacho-motor/*"[0m
+    
+        # 3
+        [39m[][0m
+    
+    Attempted function clauses (showing 1 out of 1):
+    
+        def cmd(command, args, opts) when is_binary(command) and [31mis_list(args)[0m
+    
+[31m    (elixir) lib/system.ex:621: System.cmd/3
+[0m iex(2)>          iex(2)> System.cmd("ls", "/sys/class/tacho-motor/*")["ls", "/sys/class/tacho-motor/*")[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        ])[C7[r[999;999H[6n8        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        
+[31m** (UndefinedFunctionError) function System.cmd/1 is undefined or private. Did you mean one of:
+
+      * cmd/2
+      * cmd/3
+[0m
+[31m    (elixir) System.cmd(["ls", "/sys/class/tacho-motor/*"])
+[0m iex(2)>          iex(2)> System.cmd(["ls", "/sys/class/tacho-motor/*"])[C        ) "ls", "/sys/class/tacho-motor/*") [C7[r[999;999H[6n8        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        
+[31m** (FunctionClauseError) no function clause matching in System.cmd/3[0m    
+    
+    The following arguments were given to System.cmd/3:
+    
+        # 1
+        [32m"ls"[0m
+    
+        # 2
+        [32m"/sys/class/tacho-motor/*"[0m
+    
+        # 3
+        [39m[][0m
+    
+    Attempted function clauses (showing 1 out of 1):
+    
+        def cmd(command, args, opts) when is_binary(command) and [31mis_list(args)[0m
+    
+[31m    (elixir) lib/system.ex:621: System.cmd/3
+[0m iex(2)>          iex(2)> System.cmd("ls", "/sys/class/tacho-motor/*")["/sys/class/tacho-motor/*")[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        ])[C7[r[999;999H[6n8        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        
+ls: /sys/class/tacho-motor/*: No such file or directory
+[33m[39m{[0m[33m[32m""[0m[33m[39m,[0m[33m 1[39m}[0m[33m[0m
+iex(3)> lego-ev3-m-motor
+7[r[999;999H[6n8[31m** (CompileError) iex:3: undefined function lego/0[0m
+[31m    (stdlib) lists.erl:1354: :lists.mapfoldl/3
+    (stdlib) lists.erl:1354: :lists.mapfoldl/3
+[0m iex(3)>          iex(3)> lego-ev3-m-motor                         iex(3)> System.cmd("ls", ["/sys/class/tacho-motor/*"])[C        "]) "]) "]) "]) "]) "]) "]) "]) "]) "]) "]) "]) "]) "]) [C7[r[999;999H[6n8        [C        [C        
+[33m[39m{[0m[33m[32m"i2c-adapter\nbacklight\nvtconsole\nusbmon\nrfkill\ntacho-motor\nlego-sensor\nwatchdog\nscsi_device\nhidraw\ndc-motor\nscsi_generic\nlego-port\nzram-control\nieee80211\npower_supply\nspi_master\nsound\ngraphics\ninput\nblock\ni2c-dev\nmisc\nleds\ngpio\nscsi_host\nscsi_disk\nmmc_host\ntty\nudc\nrtc\npwm\nmtd\nnet\nmem\ndma\nbdi\nvc\n"[0m[33m[39m,[0m[33m
+ 0[39m}[0m[33m[0m
+iex(4)>         iex(4)> System.cmd("ls", ["/sys/class"])/"])t"])a"])c"])h"])o"])-"])m"])o"])t"])o"])r"])[C7[r[999;999H[6n8        [C        [C        
+[33m[39m{[0m[33m[32m"motor2\nmotor1\nmotor0\n"[0m[33m[39m,[0m[33m 0[39m}[0m[33m[0m
+iex(5)>         iex(5)> System.cmd("ls", ["/sys/class/tacho-motor"])/"])m"])o"])t"])o"])r"])0"])[C7[r[999;999H[6n8        [C        [C        
+[33m[39m{[0m[33m[32m"stop_actions\nmax_speed\nspeed_pid\nstop_action\nuevent\naddress\ndriver_name\nsubsystem\nduty_cycle\ncommands\nposition_sp\ndevice\ntime_sp\nhold_pid\nposition\npolarity\nspeed_sp\nduty_cycle_sp\nstate\nspeed\npower\nramp_down_sp\ncount_per_rot\ncommand\nramp_up_sp\n"[0m[33m[39m,[0m[33m
+ 0[39m}[0m[33m[0m
+iex(6)>         iex(6)> System.cmd("ls", ["/sys/class/tacho-motor/motor0"])[C        ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) ]) [C        ) ) ")")i")f")c")o")n")f")i")g")[C7[r[999;999H[6n8        [C        
+[31m** (UndefinedFunctionError) function System.cmd/1 is undefined or private. Did you mean one of:
+
+      * cmd/2
+      * cmd/3
+[0m
+[31m    (elixir) System.cmd("ifconfig")
+[0m iex(6)>          iex(6)> System.cmd("ifconfig"),) )[)])[C        [C        [C        
+[31m** (ErlangError) Erlang error: :enoent[0m
+[31m    (elixir) lib/system.ex:634: System.cmd("ifconfig", [], [])
+[0m iex(6)>          iex(6)> System.cmd("ifconfig", [])[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        "])"])[C7[r[999;999H[6n8        [C        
+[31m** (ErlangError) Erlang error: :enoent[0m
+[31m    (elixir) lib/system.ex:634: System.cmd("ifconfig", [""], [])
+[0m iex(6)>          iex(6)> System.cmd("ifconfig", [""])) ) ) ) ) )  )) ,) )[)])[C        [C        [C        config", []) pconfig", [])[C7[r[999;999H[6n8        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        
+[31m** (ErlangError) Erlang error: :enoent[0m
+[31m    (elixir) lib/system.ex:634: System.cmd("ipconfig", [], [])
+[0m iex(6)>          iex(6)> System.cmd("ipconfig", [])config", []) fconfig", [])[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        
+[31m** (ErlangError) Erlang error: :enoent[0m
+[31m    (elixir) lib/system.ex:634: System.cmd("ifconfig", [], [])
+[0m iex(6)> Nerves.NetworkInterface.interfaces
+7[r[999;999H[6n8[33m[39m[[0m[33m[32m"lo"[0m[33m[39m,[0m[33m [32m"usb0"[0m[33m[39m,[0m[33m [32m"wlan0"[0m[33m[39m][0m[33m[0m
+iex(7)>         iex(7)> Nerves.NetworkInterface.interfaces          status "wlan0"
+7[r[999;999H[6n8[33m[39m{[0m[33m[36m:ok[0m[33m[39m,[0m[33m
+ [39m%{[0m[33m
+   [36mifname:[0m[33m [32m"wlan0"[0m[33m[39m,[0m[33m
+   [36mindex:[0m[33m 3[39m,[0m[33m
+   [36mis_broadcast:[0m[33m [35mtrue[0m[33m[39m,[0m[33m
+   [36mis_lower_up:[0m[33m [35mfalse[0m[33m[39m,[0m[33m
+   [36mis_multicast:[0m[33m [35mtrue[0m[33m[39m,[0m[33m
+   [36mis_running:[0m[33m [35mfalse[0m[33m[39m,[0m[33m
+   [36mis_up:[0m[33m [35mtrue[0m[33m[39m,[0m[33m
+   [36mmac_address:[0m[33m [32m"74:da:38:8b:c2:9c"[0m[33m[39m,[0m[33m
+   [36mmac_broadcast:[0m[33m [32m"ff:ff:ff:ff:ff:ff"[0m[33m[39m,[0m[33m
+   [36mmtu:[0m[33m 1500[39m,[0m[33m
+   [36moperstate:[0m[33m [36m:down[0m[33m[39m,[0m[33m
+   [36mstats:[0m[33m [39m%{[0m[33m
+     [36mcollisions:[0m[33m 0[39m,[0m[33m
+     [36mmulticast:[0m[33m 0[39m,[0m[33m
+     [36mrx_bytes:[0m[33m 0[39m,[0m[33m
+     [36mrx_dropped:[0m[33m 1616[39m,[0m[33m
+     [36mrx_errors:[0m[33m 0[39m,[0m[33m
+     [36mrx_packets:[0m[33m 0[39m,[0m[33m
+     [36mtx_bytes:[0m[33m 0[39m,[0m[33m
+     [36mtx_dropped:[0m[33m 0[39m,[0m[33m
+     [36mtx_errors:[0m[33m 0[39m,[0m[33m
+     [36mtx_packets:[0m[33m 0
+   [39m}[0m[33m[39m,[0m[33m
+   [36mtype:[0m[33m [36m:ethernet[0m[33m
+ [39m}[0m[33m[39m}[0m[33m[0m
+iex(8)>         iex(8)> Nerves.NetworkInterface.status "wlan0" "wlan0"      s "wlan0"e "wlan0"t "wlan0"t "wlan0"i "wlan0"n "wlan0"g "wlan0"s "wlan0"[C7[r[999;999H[6n8        [C        [C        [C        [C        [C        [C        [C        
+[33m[39m{[0m[33m[36m:ok[0m[33m[39m,[0m[33m
+ [39m%{[0m[33m
+   [36mipv4_address:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_broadcast:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_gateway:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_subnet_mask:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mmac_address:[0m[33m [32m"74:da:38:8b:c2:9c"[0m[33m
+ [39m}[0m[33m[39m}[0m[33m[0m
+iex(9)> flush()[C7[r[999;999H[6n8        [C        
+[33m[36m:ok[0m[33m[0m
+iex(10)>          iex(10)> flush()                iex(10)> Nerves.NetworkInterface.settings "wlan0"
+[33m[39m{[0m[33m[36m:ok[0m[33m[39m,[0m[33m
+ [39m%{[0m[33m
+   [36mipv4_address:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_broadcast:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_gateway:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_subnet_mask:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mmac_address:[0m[33m [32m"74:da:38:8b:c2:9c"[0m[33m
+ [39m}[0m[33m[39m}[0m[33m[0m
+iex(11)>          iex(11)> Nerves.NetworkInterface.settings "wlan0"
+[33m[39m{[0m[33m[36m:ok[0m[33m[39m,[0m[33m
+ [39m%{[0m[33m
+   [36mipv4_address:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_broadcast:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_gateway:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_subnet_mask:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mmac_address:[0m[33m [32m"74:da:38:8b:c2:9c"[0m[33m
+ [39m}[0m[33m[39m}[0m[33m[0m
+iex(12)>          iex(12)> Nerves.NetworkInterface.settings "wlan0"                                                 iex(12)> flush()                iex(12)> Nerves.NetworkInterface.settings "wlan0"                                                 iex(12)> Nerves.NetworkInterface.status "wlan0"
+7[r[999;999H[6n8[33m[39m{[0m[33m[36m:ok[0m[33m[39m,[0m[33m
+ [39m%{[0m[33m
+   [36mifname:[0m[33m [32m"wlan0"[0m[33m[39m,[0m[33m
+   [36mindex:[0m[33m 3[39m,[0m[33m
+   [36mis_broadcast:[0m[33m [35mtrue[0m[33m[39m,[0m[33m
+   [36mis_lower_up:[0m[33m [35mfalse[0m[33m[39m,[0m[33m
+   [36mis_multicast:[0m[33m [35mtrue[0m[33m[39m,[0m[33m
+   [36mis_running:[0m[33m [35mfalse[0m[33m[39m,[0m[33m
+   [36mis_up:[0m[33m [35mtrue[0m[33m[39m,[0m[33m
+   [36mmac_address:[0m[33m [32m"74:da:38:8b:c2:9c"[0m[33m[39m,[0m[33m
+   [36mmac_broadcast:[0m[33m [32m"ff:ff:ff:ff:ff:ff"[0m[33m[39m,[0m[33m
+   [36mmtu:[0m[33m 1500[39m,[0m[33m
+   [36moperstate:[0m[33m [36m:down[0m[33m[39m,[0m[33m
+   [36mstats:[0m[33m [39m%{[0m[33m
+     [36mcollisions:[0m[33m 0[39m,[0m[33m
+     [36mmulticast:[0m[33m 0[39m,[0m[33m
+     [36mrx_bytes:[0m[33m 0[39m,[0m[33m
+     [36mrx_dropped:[0m[33m 1832[39m,[0m[33m
+     [36mrx_errors:[0m[33m 0[39m,[0m[33m
+     [36mrx_packets:[0m[33m 0[39m,[0m[33m
+     [36mtx_bytes:[0m[33m 0[39m,[0m[33m
+     [36mtx_dropped:[0m[33m 0[39m,[0m[33m
+     [36mtx_errors:[0m[33m 0[39m,[0m[33m
+     [36mtx_packets:[0m[33m 0
+   [39m}[0m[33m[39m,[0m[33m
+   [36mtype:[0m[33m [36m:ethernet[0m[33m
+ [39m}[0m[33m[39m}[0m[33m[0m
+iex(13)> Nerves.NetworkInterface.ifup "wlaon  n0_"  "
+7[r[999;999H[6n8[33m[36m:ok[0m[33m[0m
+iex(14)>          iex(14)> Nerves.NetworkInterface.ifup "wlan0"                                             iex(14)> Nerves.NetworkInterface.status "wlan0"
+[33m[39m{[0m[33m[36m:ok[0m[33m[39m,[0m[33m
+ [39m%{[0m[33m
+   [36mifname:[0m[33m [32m"wlan0"[0m[33m[39m,[0m[33m
+   [36mindex:[0m[33m 3[39m,[0m[33m
+   [36mis_broadcast:[0m[33m [35mtrue[0m[33m[39m,[0m[33m
+   [36mis_lower_up:[0m[33m [35mfalse[0m[33m[39m,[0m[33m
+   [36mis_multicast:[0m[33m [35mtrue[0m[33m[39m,[0m[33m
+   [36mis_running:[0m[33m [35mfalse[0m[33m[39m,[0m[33m
+   [36mis_up:[0m[33m [35mtrue[0m[33m[39m,[0m[33m
+   [36mmac_address:[0m[33m [32m"74:da:38:8b:c2:9c"[0m[33m[39m,[0m[33m
+   [36mmac_broadcast:[0m[33m [32m"ff:ff:ff:ff:ff:ff"[0m[33m[39m,[0m[33m
+   [36mmtu:[0m[33m 1500[39m,[0m[33m
+   [36moperstate:[0m[33m [36m:down[0m[33m[39m,[0m[33m
+   [36mstats:[0m[33m [39m%{[0m[33m
+     [36mcollisions:[0m[33m 0[39m,[0m[33m
+     [36mmulticast:[0m[33m 0[39m,[0m[33m
+     [36mrx_bytes:[0m[33m 0[39m,[0m[33m
+     [36mrx_dropped:[0m[33m 1963[39m,[0m[33m
+     [36mrx_errors:[0m[33m 0[39m,[0m[33m
+     [36mrx_packets:[0m[33m 0[39m,[0m[33m
+     [36mtx_bytes:[0m[33m 0[39m,[0m[33m
+     [36mtx_dropped:[0m[33m 0[39m,[0m[33m
+     [36mtx_errors:[0m[33m 0[39m,[0m[33m
+     [36mtx_packets:[0m[33m 0
+   [39m}[0m[33m[39m,[0m[33m
+   [36mtype:[0m[33m [36m:ethernet[0m[33m
+ [39m}[0m[33m[39m}[0m[33m[0m
+iex(15)>          iex(15)> Nerves.NetworkInterface.status "wlan0"                                               iex(15)> Nerves.NetworkInterface.ifup "wlan0"                                             iex(15)> Nerves.NetworkInterface.status "wlan0"                                               iex(15)> Nerves.NetworkInterface.settings "wlan0"
+7[r[999;999H[6n8[33m[39m{[0m[33m[36m:ok[0m[33m[39m,[0m[33m
+ [39m%{[0m[33m
+   [36mipv4_address:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_broadcast:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_gateway:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_subnet_mask:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mmac_address:[0m[33m [32m"74:da:38:8b:c2:9c"[0m[33m
+ [39m}[0m[33m[39m}[0m[33m[0m
+iex(16)>          iex(16)> Nerves.NetworkInterface.settings "wlan0"                                                 iex(16)> Nerves.NetworkInterface.status "wlan0"                                               iex(16)> Nerves.NetworkInterface.ifup "wlan0"
+[33m[36m:ok[0m[33m[0m
+iex(17)>          iex(17)> Nerves.NetworkInterface.ifup "wlan0"                                             iex(17)> Nerves.NetworkInterface.settings "wlan0"
+[33m[39m{[0m[33m[36m:ok[0m[33m[39m,[0m[33m
+ [39m%{[0m[33m
+   [36mipv4_address:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_broadcast:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_gateway:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_subnet_mask:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mmac_address:[0m[33m [32m"74:da:38:8b:c2:9c"[0m[33m
+ [39m}[0m[33m[39m}[0m[33m[0m
+iex(18)>          iex(18)> Nerves.NetworkInterface.settings "wlan0"
+7[r[999;999H[6n8[33m[39m{[0m[33m[36m:ok[0m[33m[39m,[0m[33m
+ [39m%{[0m[33m
+   [36mipv4_address:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_broadcast:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_gateway:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mipv4_subnet_mask:[0m[33m [32m""[0m[33m[39m,[0m[33m
+   [36mmac_address:[0m[33m [32m"74:da:38:8b:c2:9c"[0m[33m
+ [39m}[0m[33m[39m}[0m[33m[0m
+iex(19)>          iex(19)>          iex(19)> Nerves.NetworkInterface.settings "wlan0"                                                 iex(19)> Nerves.NetworkInterface.ifup "wlan0"                                             iex(19)> Nerves.NetworkInterface.settings "wlan0"                                                 iex(19)> Nerves.NetworkInterface.status "wlan0"                                               iex(19)> Nerves.NetworkInterface.ifup "wlan0"                                             iex(19)> Nerves.NetworkInterface.status "wlan0"                                               iex(19)> Nerves.NetworkInterface.settings "wlan0"                                                 iex(19)> flush()                iex(19)> Nerves.NetworkInterface.settings "wlan0"                                                 iex(19)> Nerves.NetworkInterface.status "wlan0"                                               iex(19)> Nerves.NetworkInterface.interfaces                                           iex(19)> System.cmd("ifconfig", [])                                   iex(19)> System.cmd("ipconfig", [])                                   iex(19)> System.cmd("ifconfig", [])                                   iex(19)> System.cmd("ipconfig", [])                                   iex(19)> System.cmd("ifconfig", [""])                                     iex(19)> System.cmd("ifconfig", [])                                   iex(19)> System.cmd("ifconfig")                               iex(19)> System.cmd("ls", ["/sys/class/tacho-motor/motor0"])
+7[r[999;999H[6n8[33m[39m{[0m[33m[32m"stop_actions\nmax_speed\nspeed_pid\nstop_action\nuevent\naddress\ndriver_name\nsubsystem\nduty_cycle\ncommands\nposition_sp\ndevice\ntime_sp\nhold_pid\nposition\npolarity\nspeed_sp\nduty_cycle_sp\nstate\nspeed\npower\nramp_down_sp\ncount_per_rot\ncommand\nramp_up_sp\n"[0m[33m[39m,[0m[33m
+ 0[39m}[0m[33m[0m
+iex(20)>          iex(20)> System.cmd("ls", ["/sys/class/tacho-motor/motor0"])[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        ystem.cmd("ls", ["/sys/class/tacho-motor/motor0"]) stem.cmd("ls", ["/sys/class/tacho-motor/motor0"]) tem.cmd("ls", ["/sys/class/tacho-motor/motor0"]) em.cmd("ls", ["/sys/class/tacho-motor/motor0"]) m.cmd("ls", ["/sys/class/tacho-motor/motor0"]) .cmd("ls", ["/sys/class/tacho-motor/motor0"]) cmd("ls", ["/sys/class/tacho-motor/motor0"]) md("ls", ["/sys/class/tacho-motor/motor0"]) d("ls", ["/sys/class/tacho-motor/motor0"]) ("ls", ["/sys/class/tacho-motor/motor0"]) "ls", ["/sys/class/tacho-motor/motor0"]) ls", ["/sys/class/tacho-motor/motor0"]) s", ["/sys/class/tacho-motor/motor0"]) ", ["/sys/class/tacho-motor/motor0"]) , ["/sys/class/tacho-motor/motor0"])  ["/sys/class/tacho-motor/motor0"]) ["/sys/class/tacho-motor/motor0"]) "/sys/class/tacho-motor/motor0"]) F"/sys/class/tacho-motor/motor0"])i"/sys/class/tacho-motor/motor0"])l"/sys/class/tacho-motor/motor0"])e"/sys/class/tacho-motor/motor0"])."/sys/class/tacho-motor/motor0"])r"/sys/class/tacho-motor/motor0"])e"/sys/class/tacho-motor/motor0"])a"/sys/class/tacho-motor/motor0"])d"/sys/class/tacho-motor/motor0"]) "/sys/class/tacho-motor/motor0"])[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C          
+7[r[999;999H[6n8[33m[39m{[0m[33m[36m:error[0m[33m[39m,[0m[33m [36m:eisdir[0m[33m[39m}[0m[33m[0m
+iex(21)>          iex(21)> File.read "/sys/class/tacho-motor/motor0"/"a"c"t"i"k"o"" " o"n"s"[C7[r[999;999H[6n8        
+[33m[39m{[0m[33m[36m:error[0m[33m[39m,[0m[33m [36m:enoent[0m[33m[39m}[0m[33m[0m
+iex(22)>          iex(22)> File.read "/sys/class/tacho-motor/motor0/actions"" " " " " " " c"o"m"m"a"n"d"s"[C        
+[33m[39m{[0m[33m[36m:ok[0m[33m[39m,[0m[33m
+ [32m"run-forever run-to-abs-pos run-to-rel-pos run-timed run-direct stop reset\n"[0m[33m[39m}[0m[33m[0m
+iex(23)>          iex(23)> File.read "/sys/class/tacho-motor/motor0/commands"[C        [C         "/sys/class/tacho-motor/motor0/commands"  "/sys/class/tacho-motor/motor0/commands"  "/sys/class/tacho-motor/motor0/commands"  "/sys/class/tacho-motor/motor0/commands" w "/sys/class/tacho-motor/motor0/commands"r "/sys/class/tacho-motor/motor0/commands"i "/sys/class/tacho-motor/motor0/commands"t "/sys/class/tacho-motor/motor0/commands"e "/sys/class/tacho-motor/motor0/commands"[C        [C        [C        ~sys/class/tacho-motor/motor0/commands"sys/class/tacho-motor/motor0/commands" sys/class/tacho-motor/motor0/commands" /sys/class/tacho-motor/motor0/commands"[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        , ""r"u"n"-"f"o"r"e"v"e"r"[C7[r[999;999H[6n8        
+[33m[39m{[0m[33m[36m:error[0m[33m[39m,[0m[33m [36m:eacces[0m[33m[39m}[0m[33m[0m
+iex(24)>          iex(24)> File.write "/sys/class/tacho-motor/motor0/commands", "run-forever" "/sys/class/tacho-motor/motor0/commands", "run-forever"  "/sys/class/tacho-motor/motor0/commands", "run-forever"  "/sys/class/tacho-motor/motor0/commands", "run-forever"  "/sys/class/tacho-motor/motor0/commands", "run-forever"  "/sys/class/tacho-motor/motor0/commands", "run-forever" p "/sys/class/tacho-motor/motor0/commands", "run-forever"u "/sys/class/tacho-motor/motor0/commands", "run-forever"t "/sys/class/tacho-motor/motor0/commands", "run-forever"s "/sys/class/tacho-motor/motor0/commands", "run-forever"[C7[r[999;999H[6n8        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        
+[31m** (UndefinedFunctionError) function File.puts/2 is undefined or private[0m
+[31m    (elixir) File.puts("/sys/class/tacho-motor/motor0/commands", "run-forever")
+[0m iex(24)>           iex(24)> File.puts "/sys/class/tacho-motor/motor0/commands", "run-forever"                                                                           iex(24)> File.write "/sys/class/tacho-motor/motor0/commands", "run-forever"                                                                            iex(24)> File.read "/sys/class/tacho-motor/motor0/commands"                                                            iex(24)> File.read "/sys/class/tacho-motor/motor0/actions"                                                           iex(24)> File.read "/sys/class/tacho-motor/motor0"                                                   iex(24)> System.cmd("ls", ["/sys/class/tacho-motor/motor0"])                                                             iex(24)> Nerves.NetworkInterface.settings "wlan0"                                                  iex(24)> System.cmd("ls", ["/sys/class/tacho-motor/motor0"])                                                             iex(24)> File.read "/sys/class/tacho-motor/motor0"                                                   iex(24)> File.read "/sys/class/tacho-motor/motor0/actions"                                                           iex(24)> File.read "/sys/class/tacho-motor/motor0/commands"
+7[r[999;999H[6n8[33m[39m{[0m[33m[36m:ok[0m[33m[39m,[0m[33m
+ [32m"run-forever run-to-abs-pos run-to-rel-pos run-timed run-direct stop reset\n"[0m[33m[39m}[0m[33m[0m
+iex(25)>          iex(25)> File.read "/sys/class/tacho-motor/motor0/commands" "/sys/class/tacho-motor/motor0/commands"  "/sys/class/tacho-motor/motor0/commands"  "/sys/class/tacho-motor/motor0/commands"  "/sys/class/tacho-motor/motor0/commands"  "/sys/class/tacho-motor/motor0/commands"  "/sys/class/tacho-motor/motor0/commands" e "/sys/class/tacho-motor/motor0/commands". "/sys/class/tacho-motor/motor0/commands"o "/sys/class/tacho-motor/motor0/commands"p "/sys/class/tacho-motor/motor0/commands"e "/sys/class/tacho-motor/motor0/commands"n "/sys/class/tacho-motor/motor0/commands"FFile.open "/sys/class/tacho-motor/motor0/commands"iFile.open "/sys/class/tacho-motor/motor0/commands"lFile.open "/sys/class/tacho-motor/motor0/commands"eFile.open "/sys/class/tacho-motor/motor0/commands".File.open "/sys/class/tacho-motor/motor0/commands"rFile.open "/sys/class/tacho-motor/motor0/commands"eFile.open "/sys/class/tacho-motor/motor0/commands"aFile.open "/sys/class/tacho-motor/motor0/commands"dFile.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands""File.open "/sys/class/tacho-motor/motor0/commands"/File.open "/sys/class/tacho-motor/motor0/commands"sFile.open "/sys/class/tacho-motor/motor0/commands"yFile.open "/sys/class/tacho-motor/motor0/commands"sFile.open "/sys/class/tacho-motor/motor0/commands"/File.open "/sys/class/tacho-motor/motor0/commands"cFile.open "/sys/class/tacho-motor/motor0/commands"lFile.open "/sys/class/tacho-motor/motor0/commands"aFile.open "/sys/class/tacho-motor/motor0/commands"sFile.open "/sys/class/tacho-motor/motor0/commands"sFile.open "/sys/class/tacho-motor/motor0/commands"/File.open "/sys/class/tacho-motor/motor0/commands"tFile.open "/sys/class/tacho-motor/motor0/commands"aFile.open "/sys/class/tacho-motor/motor0/commands"cFile.open "/sys/class/tacho-motor/motor0/commands"hFile.open "/sys/class/tacho-motor/motor0/commands"oFile.open "/sys/class/tacho-motor/motor0/commands"-File.open "/sys/class/tacho-motor/motor0/commands"mFile.open "/sys/class/tacho-motor/motor0/commands"oFile.open "/sys/class/tacho-motor/motor0/commands"tFile.open "/sys/class/tacho-motor/motor0/commands"oFile.open "/sys/class/tacho-motor/motor0/commands"rFile.open "/sys/class/tacho-motor/motor0/commands"/File.open "/sys/class/tacho-motor/motor0/commands"mFile.open "/sys/class/tacho-motor/motor0/commands"oFile.open "/sys/class/tacho-motor/motor0/commands"tFile.open "/sys/class/tacho-motor/motor0/commands"oFile.open "/sys/class/tacho-motor/motor0/commands"rFile.open "/sys/class/tacho-motor/motor0/commands"0File.open "/sys/class/tacho-motor/motor0/commands"/File.open "/sys/class/tacho-motor/motor0/commands"cFile.open "/sys/class/tacho-motor/motor0/commands"oFile.open "/sys/class/tacho-motor/motor0/commands"mFile.open "/sys/class/tacho-motor/motor0/commands"mFile.open "/sys/class/tacho-motor/motor0/commands"aFile.open "/sys/class/tacho-motor/motor0/commands"nFile.open "/sys/class/tacho-motor/motor0/commands"dFile.open "/sys/class/tacho-motor/motor0/commands"sFile.open "/sys/class/tacho-motor/motor0/commands""File.open "/sys/class/tacho-motor/motor0/commands"File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands" {File.open "/sys/class/tacho-motor/motor0/commands"}File.open "/sys/class/tacho-motor/motor0/commands"[C        [C        [C        [C        :}File.open "/sys/class/tacho-motor/motor0/commands"o}File.open "/sys/class/tacho-motor/motor0/commands"k}File.open "/sys/class/tacho-motor/motor0/commands",}File.open "/sys/class/tacho-motor/motor0/commands" }File.open "/sys/class/tacho-motor/motor0/commands"f}File.open "/sys/class/tacho-motor/motor0/commands"i}File.open "/sys/class/tacho-motor/motor0/commands"l}File.open "/sys/class/tacho-motor/motor0/commands"e}File.open "/sys/class/tacho-motor/motor0/commands" }File.open "/sys/class/tacho-motor/motor0/commands"[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        
+7[r[999;999H[6n8[31m** (SyntaxError) iex:25: syntax error before: 'File'[0m
+[31m
+[0m iex(25)>           iex(25)> {:ok, file }File.open "/sys/class/tacho-motor/motor0/commands"}File.open "/sys/class/tacho-motor/motor0/commands" [C         File.open "/sys/class/tacho-motor/motor0/commands"=File.open "/sys/class/tacho-motor/motor0/commands" File.open "/sys/class/tacho-motor/motor0/commands"[C7[r[999;999H[6n8        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        
+[33m[39m{[0m[33m[36m:ok[0m[33m[39m,[0m[33m #PID<0.1485.0>[39m}[0m[33m[0m
+iex(26)> file. .puts "run-to  forever"
+7[r[999;999H[6n8[31m** (ArgumentError) you attempted to apply a function on #PID<0.1485.0>. Modules (the first argument of apply) must always be an atom[0m
+[31m    :erlang.apply(#PID<0.1485.0>, :puts, ["run-forever"])
+[0m iex(26)>           iex(26)> file.puts "run-forever"ile.puts "run-forever" Dile.puts "run-forever"ile.puts "run-forever" File.puts "run-forever"[C        [C        [C        [C        [C        [C        [C        [C        [C        f"run-forever"i"run-forever"l"run-forever"e"run-forever","run-forever" "run-forever"[C7[r[999;999H[6n8        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        
+[31m** (UndefinedFunctionError) function File.puts/2 is undefined or private[0m
+[31m    (elixir) File.puts(#PID<0.1485.0>, "run-forever")
+[0m iex(26)> IO.binwrite file  , "runf -fprev    orer  v ever"
+7[r[999;999H[6n8[33m[39m{[0m[33m[36m:error[0m[33m[39m,[0m[33m [36m:ebadf[0m[33m[39m}[0m[33m[0m
+iex(27)>          iex(27)> IO.binwrite file, "run-forever"[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [31m** (EXIT) interrupted[0m
+iex(27)>          iex(27)> IO.binwrite file, "run-forever"                                        iex(27)>          iex(27)> IO.binwrite file, "run-forever"                                        iex(27)> File.puts file, "run-forever"                                      iex(27)> file.puts "run-forever"                                iex(27)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0/commands"" " " " " " " " " [C7[r[999;999H[6n8        
+[31m** (MatchError) no match of right hand side value: {:error, :eisdir}[0m
+[31m    (stdlib) erl_eval.erl:450: :erl_eval.expr/5
+    (iex) lib/iex/evaluator.ex:257: IEx.Evaluator.handle_eval/5
+    (iex) lib/iex/evaluator.ex:237: IEx.Evaluator.do_eval/3
+    (iex) lib/iex/evaluator.ex:215: IEx.Evaluator.eval/3
+    (iex) lib/iex/evaluator.ex:103: IEx.Evaluator.loop/1
+    (iex) lib/iex/evaluator.ex:27: IEx.Evaluator.init/4
+[0m iex(27)>           iex(27)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0"/"s"p"e"e"d"[C7[r[999;999H[6n8        
+[33m[39m{[0m[33m[36m:ok[0m[33m[39m,[0m[33m #PID<0.1494.0>[39m}[0m[33m[0m
+iex(28)> file    IO.binwrite(  file, "3  5 4
+7[r[999;999H[6n8[31m** (FunctionClauseError) no function clause matching in IO.binwrite/2[0m    
+    
+    The following arguments were given to IO.binwrite/2:
+    
+        # 1
+        #PID<0.1494.0>
+    
+        # 2
+        4
+    
+    Attempted function clauses (showing 1 out of 1):
+    
+        def binwrite(device, item) when [31mis_list(item)[0m or [31mis_binary(item)[0m
+    
+[31m    (elixir) lib/io.ex:173: IO.binwrite/2
+[0m iex(28)>           iex(28)> IO.binwrite file, 4"4[C        "
+7[r[999;999H[6n8[33m[39m{[0m[33m[36m:error[0m[33m[39m,[0m[33m [36m:ebadf[0m[33m[39m}[0m[33m[0m
+iex(29)>          iex(29)> IO.binwrite file, "4"
+[33m[39m{[0m[33m[36m:error[0m[33m[39m,[0m[33m [36m:terminated[0m[33m[39m}[0m[33m[0m
+iex(30)> fil   File.close file
+7[r[999;999H[6n8[33m[36m:ok[0m[33m[0m
+iex(31)>          iex(31)> File.close file                        iex(31)> IO.binwrite file, "4"                              iex(31)> IO.binwrite file, 4                            iex(31)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0/speed"                                                                      iex(31)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0"                                                                iex(31)> IO.binwrite file, "run-forever"                                        iex(31)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0"                                                                iex(31)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0/speed"" " " " " c"o"m"m"a"n"d"[C7[r[999;999H[6n8        
+[31m** (MatchError) no match of right hand side value: {:error, :eacces}[0m
+[31m    (stdlib) erl_eval.erl:450: :erl_eval.expr/5
+    (iex) lib/iex/evaluator.ex:257: IEx.Evaluator.handle_eval/5
+    (iex) lib/iex/evaluator.ex:237: IEx.Evaluator.do_eval/3
+    (iex) lib/iex/evaluator.ex:215: IEx.Evaluator.eval/3
+    (iex) lib/iex/evaluator.ex:103: IEx.Evaluator.loop/1
+    (iex) lib/iex/evaluator.ex:27: IEx.Evaluator.init/4
+[0m iex(31)>           iex(31)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0/command"[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        s"[C7[r[999;999H[6n8        
+[33m[39m{[0m[33m[36m:ok[0m[33m[39m,[0m[33m #PID<0.1503.0>[39m}[0m[33m[0m
+iex(32)> file.e      File.read file
+7[r[999;999H[6n8[31m** (FunctionClauseError) no function clause matching in IO.chardata_to_string/1[0m    
+    
+    The following arguments were given to IO.chardata_to_string/1:
+    
+        # 1
+        #PID<0.1503.0>
+    
+    Attempted function clauses (showing 2 out of 2):
+    
+        def chardata_to_string(string) when [31mis_binary(string)[0m
+        def chardata_to_string(list) when [31mis_list(list)[0m
+    
+[31m    (elixir) lib/io.ex:461: IO.chardata_to_string/1
+    (elixir) lib/file.ex:339: File.read/1
+[0m iex(32)>           iex(32)> File.read file                        iex(32)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0/commands"                                                                          iex(32)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0/command"
+7[r[999;999H[6n8[31m** (MatchError) no match of right hand side value: {:error, :eacces}[0m
+[31m    (stdlib) erl_eval.erl:450: :erl_eval.expr/5
+    (iex) lib/iex/evaluator.ex:257: IEx.Evaluator.handle_eval/5
+    (iex) lib/iex/evaluator.ex:237: IEx.Evaluator.do_eval/3
+    (iex) lib/iex/evaluator.ex:215: IEx.Evaluator.eval/3
+    (iex) lib/iex/evaluator.ex:103: IEx.Evaluator.loop/1
+    (iex) lib/iex/evaluator.ex:27: IEx.Evaluator.init/4
+[0m iex(32)>           iex(32)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0/command", [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [][C        [C        :]w]r]i]t]e][C7[r[999;999H[6n8        
+[33m[39m{[0m[33m[36m:ok[0m[33m[39m,[0m[33m #PID<0.1508.0>[39m}[0m[33m[0m
+iex(33)> file.     IO.puts file, ""                IO.binr write "run_ -forever"
+7[r[999;999H[6n8run-forever[33m[36m:ok[0m[33m[0m
+iex(34)>          iex(34)> IO.binwrite "run-forever"                                  iex(34)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0/command", [:write]", [:write] ", [:write] ", [:write] ", [:write] ", [:write] ", [:write] ", [:write] s", [:write]p", [:write]e", [:write]e", [:write]d", [:write][C7[r[999;999H[6n8        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        
+[31m** (MatchError) no match of right hand side value: {:error, :eacces}[0m
+[31m    (stdlib) erl_eval.erl:450: :erl_eval.expr/5
+    (iex) lib/iex/evaluator.ex:257: IEx.Evaluator.handle_eval/5
+    (iex) lib/iex/evaluator.ex:237: IEx.Evaluator.do_eval/3
+    (iex) lib/iex/evaluator.ex:215: IEx.Evaluator.eval/3
+    (iex) lib/iex/evaluator.ex:103: IEx.Evaluator.loop/1
+    (iex) lib/iex/evaluator.ex:27: IEx.Evaluator.init/4
+[0m iex(34)>           iex(34)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0/speed", [:write]                                                                                 iex(34)> IO.binwrite "run-forever"                                   iex(34)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0/command", [:write]                                                                                   iex(34)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0/command"                                                                         iex(34)> File.read file                        iex(34)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0/commands"                                                                          iex(34)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0/command"                                                                         iex(34)> File.close file                         iex(34)> IO.binwrite file, "4"                               iex(34)> IO.binwrite file, 4                             iex(34)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0/speed"                                                                       iex(34)> {:ok, file} = File.open "/sys/class/tacho-motor/motor0"                                                                 iex(34)> IO.binwrite file, "run-forever"                                         iex(34)> File.puts file, "run-forever"                                       iex(34)> file.puts "run-forever"                       Marvin.Ev3.Tachomotor  .semn  nses
+7[r[999;999H[6n8[31m** (UndefinedFunctionError) function Marvin.Ev3.Tachomotor.senses/0 is undefined (module Marvin.Ev3.Tachomotor is not available)[0m
+[31m    Marvin.Ev3.Tachomotor.senses()
+[0m iex(34)>           iex(34)> Marvin.Ev3.Tachomotor.senses                  
+[33m[36mMarvin.Ev3[0m[33m[0m
+iex(35)>          iex(35)> Marvin.Ev3.Senses
+7[r[999;999H[6n8[33m[36mMarvin.Ev3.Senses[0m[33m[0m
+iex(36)>          iex(36)> Marvin.Ev3.Senses.                  Marvin.Ev3.Brick.ipv4ar ddr
+7[r[999;999H[6n8[31m** (UndefinedFunctionError) function Marvin.Ev3.Brick.ipv4addr/0 is undefined (module Marvin.Ev3.Brick is not available)[0m
+[31m    Marvin.Ev3.Brick.ipv4addr()
+[0m iex(36)>           iex(36)> Marvin.Ev3.Brick.ipv4addr      addr
+7[r[999;999H[6n8[31m** (UndefinedFunctionError) function Marvin.Ev3.Brick.ipaddr/0 is undefined (module Marvin.Ev3.Brick is not available)[0m
+[31m    Marvin.Ev3.Brick.ipaddr()
+[0m iex(36)> Marvin.Ev3.Brick
+7[r[999;999H[6n8[33m[36mMarvin.Ev3.Brick[0m[33m[0m
+iex(37)>          iex(37)> Marvin.Ev3.Brick.start
+[31m** (UndefinedFunctionError) function Marvin.Ev3.Brick.start/0 is undefined (module Marvin.Ev3.Brick is not available)[0m
+[31m    Marvin.Ev3.Brick.start()
+[0m iex(37)>           iex(37)> Marvin.Ev3.Brick.start()[C        [C        
+[31m** (UndefinedFunctionError) function Marvin.Ev3.Brick.start/0 is undefined (module Marvin.Ev3.Brick is not available)[0m
+[31m    Marvin.Ev3.Brick.start()
+[0m iex(37)>           iex(37)> Marvin.Ev3.Brick.start()         34
+7[r[999;999H[6n8[33m[36mMarvin.Ev3.Bric34[0m[33m[0m
+iex(38)>          iex(38)> Marvin.Ev3.Bric34                 System.cmd("shutdown", [][C        [C        )[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        "])n])o])w])"])-now"])-now"])[C7[r[999;999H[6n8        [C        [C        [C        [C        [C        
+[31m** (ErlangError) Erlang error: :enoent[0m
+[31m    (elixir) lib/system.ex:634: System.cmd("shutdown", ["--now"], [])
+[0m iex(38)>           iex(38)> System.cmd("shutdown", ["--now"])[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        ", ["--now"]) n", ["--now"])[C        [C        [C        [C        [C        [C        [C        [C        [C        [C        now"]) now"]) [C7[r[999;999H[6n8        [C        [C        [C        [C        [C        
+[31m** (ErlangError) Erlang error: :enoent[0m
+[31m    (elixir) lib/system.ex:634: System.cmd("shutdown", ["now"], [])
+[0m iex(38)>           iex(38)> System.cmd("shutdown", ["now"])[C        [C        [C        [C        ) ) ) ) ) ) ) ) ) ,) )[)])[C        [C        [C        
+[31m** (ErlangError) Erlang error: :enoent[0m
+[31m    (elixir) lib/system.ex:634: System.cmd("shutdown", [], [])
+[0m iex(38)>           iex(38)> System.cmd("shutdown", [])[C        sshutdown", [])ushutdown", [])dshutdown", [])oshutdown", [])hutdown", []) utdown", []) tdown", []) down", []) own", []) wn", []) n", []) ", []) [C        [C        [C        [C        "])s])h])u])t])d])o])w])n])"])[C7[r[999;999H[6n8        [C        
+[31m** (ErlangError) Erlang error: :enoent[0m
+[31m    (elixir) lib/system.ex:634: System.cmd("sudo", ["shutdown"], [])
+[0m iex(38)>           iex(38)> System.cmd("sudo", ["shutdown"])[C7[r[999;999H[6n8        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        
+[31m** (ErlangError) Erlang error: :enoent[0m
+[31m    (elixir) lib/system.ex:634: System.cmd("sudo", ["shutdown"], [])
+[0m iex(38)> RingLogger.attach
+[33m[36m:ok[0m[33m[0m
+iex(39)>          [22m
+00:30:13.759 [info]  nerves_network_interface received :ifchanged and %{ifname: "wlan0", index: 3, is_broadcast: true, is_lower_up: false, is_multicast: true, is_running: false, is_up: true, type: :ethernet}
+[0m iex(39)>           [22m
+00:30:13.772 [info]  WiFiManager(wlan0) network_interface ifup
+[0m iex(39)>           [22m
+00:30:13.905 [info]  Nerves.NetworkInterface - WiFiManager(wlan0, associate_wifi) got event :ifup
+[0m iex(39)>           [22m
+00:30:13.907 [info]  WiFiManager(wlan0): ignoring event: :"CTRL-EVENT-SCAN-RESULTS"
+[0m iex(39)>           [22m
+00:30:13.931 [info]  Nerves.WpaSupplicant - WiFiManager(wlan0, associate_wifi) got event :noop
+[0m iex(39)>           [22m
+00:30:13.933 [info]  WiFiManager(wlan0): ignoring event: :"WPS-AP-AVAILABLE"
+[0m iex(39)>           [22m
+00:30:13.955 [info]  Nerves.WpaSupplicant - WiFiManager(wlan0, associate_wifi) got event :noop
+[0m iex(39)>           [22m
+00:30:13.955 [info]  WiFiManager(wlan0) wpa_supplicant network_not_found
+[0m iex(39)>           [22m
+00:30:13.983 [info]  Nerves.WpaSupplicant - WiFiManager(wlan0, associate_wifi) got event :wifi_disconnected
+[0m iex(39)>           [22m
+00:30:18.781 [info]  WiFiManager(wlan0): ignoring event: :"CTRL-EVENT-SCAN-STARTED"
+[0m iex(39)>           [22m
+00:30:18.811 [info]  Nerves.WpaSupplicant - WiFiManager(wlan0, associate_wifi) got event :noop
+[0m iex(39)>           [22m
+00:30:20.859 [info]  nerves_network_interface received :ifchanged and %{ifname: "wlan0", index: 3, is_broadcast: true, is_lower_up: false, is_multicast: true, is_running: false, is_up: true, type: :ethernet}
+[0m iex(39)>           [22m
+00:30:20.872 [info]  WiFiManager(wlan0) network_interface ifup
+[0m iex(39)>           [22m
+00:30:21.000 [info]  Nerves.NetworkInterface - WiFiManager(wlan0, associate_wifi) got event :ifup
+[0m iex(39)>           [22m
+00:30:21.008 [info]  WiFiManager(wlan0): ignoring event: :"CTRL-EVENT-SCAN-RESULTS"
+[0m iex(39)>           [22m
+00:30:21.029 [info]  Nerves.WpaSupplicant - WiFiManager(wlan0, associate_wifi) got event :noop
+[0m iex(39)>           [22m
+00:30:21.030 [info]  WiFiManager(wlan0): ignoring event: :"WPS-AP-AVAILABLE"
+[0m iex(39)>           [22m
+00:30:21.053 [info]  Nerves.WpaSupplicant - WiFiManager(wlan0, associate_wifi) got event :noop
+[0m iex(39)>           [22m
+00:30:21.053 [info]  WiFiManager(wlan0) wpa_supplicant network_not_found
+[0m iex(39)>           [22m
+00:30:21.081 [info]  Nerves.WpaSupplicant - WiFiManager(wlan0, associate_wifi) got event :wifi_disconnected
+[0m iex(39)>           [22m
+00:30:25.881 [info]  WiFiManager(wlan0): ignoring event: :"CTRL-EVENT-SCAN-STARTED"
+[0m iex(39)>           [22m
+00:30:25.910 [info]  Nerves.WpaSupplicant - WiFiManager(wlan0, associate_wifi) got event :noop
+[0m iex(39)>           iex(39)> RingLogger.attach                           [22m
+00:30:27.989 [info]  nerves_network_interface received :ifchanged and %{ifname: "wlan0", index: 3, is_broadcast: true, is_lower_up: false, is_multicast: true, is_running: false, is_up: true, type: :ethernet}
+[0m iex(39)> RingLogger.attach                           [22m
+00:30:28.002 [info]  WiFiManager(wlan0) network_interface ifup
+[0m iex(39)> RingLogger.attac                          [22m
+00:30:28.135 [info]  Nerves.NetworkInterface - WiFiManager(wlan0, associate_wifi) got event :ifup
+[0m iex(39)> RingLogger.attac                          [22m
+00:30:28.137 [info]  WiFiManager(wlan0): ignoring event: :"CTRL-EVENT-SCAN-RESULTS"
+[0m iex(39)> RingLogger.att                        [22m
+00:30:28.159 [info]  Nerves.WpaSupplicant - WiFiManager(wlan0, associate_wifi) got event :noop
+[0m iex(39)> RingLogger.att                        [22m
+00:30:28.161 [info]  WiFiManager(wlan0): ignoring event: :"WPS-AP-AVAILABLE"
+[0m iex(39)> RingLogger.at                       [22m
+00:30:28.184 [info]  Nerves.WpaSupplicant - WiFiManager(wlan0, associate_wifi) got event :noop
+[0m iex(39)> RingLogger.at                       [22m
+00:30:28.185 [info]  WiFiManager(wlan0) wpa_supplicant network_not_found
+[0m iex(39)> RingLogger.at                       [22m
+00:30:28.213 [info]  Nerves.WpaSupplicant - WiFiManager(wlan0, associate_wifi) got event :wifi_disconnected
+[0m iex(39)> RingLogger.at  detach
+7[r[999;999H[6n8[33m[36m:ok[0m[33m[0m
+iex(40)>          iex(40)> RingLogger.detach                          iex(40)> RingLogger.attach                          iex(40)> System.cmd("sudo", ["shutdown"])[C        [C        [C        [C7[r[999;999H[6n8        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        [C        
+[31m** (ErlangError) Erlang error: :enoent[0m
+[31m    (elixir) lib/system.ex:634: System.cmd("sudo", ["shutdown"], [])
+[0m iex(40)>           iex(40)> System.cmd("sudo", ["shutdown"])                                          iex(40)>  EV3 initialization passed!
+Booting EV3 EEprom Boot Loader
+
+	EEprom Version:   0.60
+	EV3 Flashtype:    N25Q128A13B
+
+EV3 Booting system 
+
+Jumping to entry point at: 0xC1080000
+
+
+U-Boot 2009.11 (Oct 26 2012 - 10:30:38)
+
+I2C:   ready
+DRAM:  64 MB
+MMC:   davinci: 0
+In:    serial
+Out:   serial
+Err:   serial
+ARM Clock : 300000000 Hz
+DDR Clock : 132000000 Hz
+Invalid MAC address read.
+Hit 'l' to stop autoboot:  0 
+reading boot.scr
+
+** Unable to read "boot.scr" from mmc 0:1 **
+reading uImage
+
+2731320 bytes read
+## Booting kernel from Legacy Image at c0007fc0 ...
+   Image Name:   Linux-4.4.32-17-ev3dev-ev3
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    2731256 Bytes =  2.6 MB
+   Load Address: c0008000
+   Entry Point:  c0008000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.4.32-17-ev3dev-ev3 (root@eabed294c0e7) (gcc version 7.3.0 (crosstool-NG 1.23.0.418-d590) ) #1 PREEMPT Tue Aug 28 13:45:55 UTC 2018
+CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=0005317f
+CPU: VIVT data cache, VIVT instruction cache
+Machine: LEGO MINDSTORMS EV3 Programmable Brick
+Ignoring tag cmdline (using the default kernel command line)
+Memory policy: Data cache writeback
+DaVinci da850/omap-l138/am18x variant 0x1
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+Kernel command line: mem=64M console=ttyS1,115200n8 root=/dev/mmcblk0p2 rootwait lpj=747520
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 59276K/65536K available (3918K kernel code, 191K rwdata, 1232K rodata, 176K init, 99K bss, 6260K reserved, 0K cma-reserved)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xc4800000 - 0xff800000   ( 944 MB)
+    lowmem  : 0xc0000000 - 0xc4000000   (  64 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .text : 0xc0008000 - 0xc050ff54   (5152 kB)
+      .init : 0xc0510000 - 0xc053c000   ( 176 kB)
+      .data : 0xc053c000 - 0xc056bdc0   ( 192 kB)
+       .bss : 0xc056bdc0 - 0xc0584b78   ( 100 kB)
+SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:245
+clocksource: timer0_1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped) preset value.. 149.50 BogoMIPS (lpj=747520)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0xc0008400 - 0xc000843c
+devtmpfs: initialized
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor ladder
+cpuidle: using governor menu
+legoev3_init: global_cursor_default: 0, default_screen_mode: -1
+edma edma.0: Legacy memcpy is enabled, things might not work
+edma edma.0: TI EDMA DMA engine driver
+edma edma.1: Legacy memcpy is enabled, things might not work
+edma edma.1: TI EDMA DMA engine driver
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+clocksource: Switched to clocksource timer0_1
+cfg80211: World regulatory domain updated:
+cfg80211:  DFS Master region: unset
+cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+cfg80211:   (2457000 KHz - 2482000 KHz @ 20000 KHz, 92000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (0 s)
+cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
+cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
+NET: Registered protocol family 2
+TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+futex hash table entries: 256 (order: -1, 3072 bytes)
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+io scheduler noop registered (default)
+Serial: 8250/16550 driver, 3 ports, IRQ sharing disabled
+serial8250.0: ttyS0 at MMIO 0x1c42000 (irq = 25, base_baud = 9375000) is a 16550A
+console [ttyS1] disabled
+serial8250.1: ttyS1 at MMIO 0x1d0c000 (irq = 53, base_baud = 8250000) is a 16550A
+console [ttyS1] enabled
+serial8250.2: ttyS2 at MMIO 0x1d0d000 (irq = 61, base_baud = 8250000) is a TL16C550
+loop: module loaded
+zram: Added device: zram0
+at24 1-0050: 16384 byte 24c128 EEPROM, read-only, 0 bytes/write
+spi_davinci spi_davinci.1: DMA: supported
+spi_davinci spi_davinci.1: DMA: RX channel: 0x00000012, TX channel: 0x00000013, event queue: 0
+Console: switching to mono frame buffer device 22x16
+fb0: ST7586 frame buffer device, using 10.5 KiB of video memory
+spi_davinci spi_davinci.1: Controller at 0xfef0e000
+spi_davinci spi_davinci.0: DMA: supported
+spi_davinci spi_davinci.0: DMA: RX channel: 0x0000000e, TX channel: 0x0000000f, event queue: 0
+spi_davinci spi_davinci.0: Controller at 0xfec41000
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci ohci.0: DA8xx OHCI
+ohci ohci.0: new USB bus registered, assigned bus number 1
+Waiting for USB PHY clock good...
+ohci ohci.0: irq 59, io mem 0x01e25000
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0001
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: DA8xx OHCI
+usb usb1: Manufacturer: Linux 4.4.32-17-ev3dev-ev3 ohci_hcd
+usb usb1: SerialNumber: ohci.0
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+usbcore: registered new interface driver usb-storage
+Waiting for USB PHY clock good...
+using random self ethernet address
+using random host ethernet address
+usb0: HOST MAC fe:cd:9a:7a:03:98
+usb0: MAC 62:3c:e1:f8:49:18
+g_cdc gadget: CDC Composite Gadget, version: King Kamehameha Day 2008
+g_cdc gadget: g_cdc ready
+omap_rtc da830-rtc: already running
+omap_rtc da830-rtc: rtc core: registered da830-rtc as rtc0
+i2c /dev entries driver
+davinci-wdt davinci-wdt: heartbeat 60 sec
+davinci_mmc da830-mmc.0: Using DMA, 4-bit mode
+hidraw: raw HID events driver (C) Jiri Kosina
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+NET: Registered protocol family 17
+input: EV3 buttons as /devices/platform/gpio-keys.0/input/input0
+Waiting for root device /dev/mmcblk0p2...
+mmc0: new high speed SDHC card at address 1234
+mmcblk0: mmc0:1234 SA16G 14.5 GiB 
+ mmcblk0: p1 p2 p4
+VFS: Mounted root (squashfs filesystem) readonly on device 179:2.
+devtmpfs: mounted
+Freeing unused kernel memory: 176K (c0510000 - c053c000)
+usb 1-1: new full-speed USB device number 2 using ohci
+                                                              
+7[r[999;999H[6n8
+
+^C^C^[[A
+^C^C^Crandom: nonblocking pool is initialized
+heart: Kernel watchdog activated (interval 5s)
+Erlang/OTP 21 [erts-10.0.5] [source] [smp:1:1] [ds:1:1:10] [async-threads:1]
+
+Error handling File /root/.cache/erlang-history/erlang-shell-log.siz. Reason: enoent
+History logging will be disabled.
+Disabling shell history logging.
+Interactive Elixir (1.8.0) - press Ctrl+C to exit (type h() ENTER for help)
+[38;5;60mToolshed[0m imported. Run h(Toolshed) for more info
+RingLogger is collecting log messages from Elixir and Linux. To see the
+messages, either attach the current IEx session to the logger:
+
+  RingLogger.attach
+
+or print the next messages in the log:
+
+  RingLogger.next
+
+iex(1)> EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: (null)
+legoev3-ports legoev3-ports: Input port in1 is disabled.
+lego-port port0: Registered 'in2' on 'legoev3-ports'.
+lego-port port1: Registered 'in3' on 'legoev3-ports'.
+lego-port port2: Registered 'in4' on 'legoev3-ports'.
+lego-port port3: Registered 'outA' on 'legoev3-ports'.
+lego-port port4: Registered 'outB' on 'legoev3-ports'.
+lego-port port5: Registered 'outC' on 'legoev3-ports'.
+lego-port port6: Registered 'outD' on 'legoev3-ports'.
+lego-port port1: Added new device 'in3:lego-ev3-touch'
+lego-port port3: Added new device 'outA:lego-ev3-l-motor'
+lego-port port4: Added new device 'outB:lego-ev3-m-motor'
+lego-port port5: Added new device 'outC:lego-ev3-l-motor'
+lego-port port0: Added new device 'in2:ev3-uart-host'
+lego-port port2: Added new device 'in4:ev3-uart-host'
+usbcore: registered new interface driver rtl8192cu
+ti_omapl_pru_suart ti_omapl_pru_suart.1: fw size 3772. downloading...
+ti_omapl_pru_suart.1: ttySU0 at MMIO 0x1d00000 (irq = 3, base_baud = 8250000) is a suart_tty
+ti_omapl_pru_suart.1: ttySU1 at MMIO 0x1d00000 (irq = 4, base_baud = 8250000) is a suart_tty
+ti_omapl_pru_suart ti_omapl_pru_suart.1: ti_omapl_pru_suart device registered(pru_clk=150000000, asp_clk=132000000)
+lego-sensor sensor0: Registered 'lego-ev3-touch' on 'in3'.
+tacho-motor motor0: Registered 'lego-ev3-l-motor' on 'outA'.
+tacho-motor motor1: Registered 'lego-ev3-m-motor' on 'outB'.
+tacho-motor motor2: Registered 'lego-ev3-l-motor' on 'outC'.
+input: EV3 speaker beep as /devices/platform/snd-legoev3/input/input1
+
+Error sending Ctrl+Z as part of the exit handshake

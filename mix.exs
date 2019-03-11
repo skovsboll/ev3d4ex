@@ -1,9 +1,9 @@
-defmodule Mygadget.MixProject do
+defmodule EV3D4.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :mygadget,
+      app: :ev3d4,
       version: "0.1.0",
       elixir: "~> 1.8",
       archives: [nerves_bootstrap: "~> 1.4"],
@@ -24,7 +24,7 @@ defmodule Mygadget.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      mod: {Mygadget.Application, []},
+      mod: {EV3D4.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

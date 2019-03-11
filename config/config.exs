@@ -54,7 +54,7 @@ config :nerves_firmware_ssh,
 # Only enable this for prod if you understand the risks.
 node_name = if Mix.env() != :prod, do: "mygadget"
 
-config :nerves_init_gadget,
+config :ev3d4,
   ifname: "wlan0",
   address_method: :dhcp,
   mdns_domain: "nerves.local",

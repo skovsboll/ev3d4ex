@@ -1,4 +1,4 @@
-defmodule MyGadget do
+defmodule EV3D4 do
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
@@ -12,21 +12,21 @@ defmodule MyGadget do
     start_wifi()
 
     # This won't get annoying...
-    spawn fn -> System.cmd("espeak", ["Good morning!"]) end
+    spawn fn -> System.cmd("espeak", ["E V 3 D 4 ready!"]) end
 
     # Define workers and child supervisors to be supervised
     children = [
-      # worker(MyGadget.Display, []),
+      worker(EV3D4.Bot, []),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: MyGadget.Supervisor]
+    opts = [strategy: :one_for_one, name: EV3D4.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   defp load_ev3_modules() do
-    wifi_driver = Application.get_env(:nerves_init_gadget, :wifi_driver)
+    wifi_driver = Application.get_env(:ev3d4, :wifi_driver)
     System.cmd("modprobe", [wifi_driver])
 
     System.cmd("/sbin/udevd", ["--daemon"])

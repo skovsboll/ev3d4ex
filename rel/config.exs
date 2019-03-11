@@ -26,8 +26,8 @@ end
 # will be used by default
 
 
-release :mygadget do  
-  set(version: current_version(:mygadget))
+release :ev3d4 do  
+  set(version: current_version(:ev3d4))
   set(strip_debug_info: true)
   plugin(Nerves)
   plugin(Shoehorn)
